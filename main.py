@@ -101,7 +101,7 @@ app = FastAPI()
 
 
 @app.get("/",response_class=HTMLResponse)
-def  read_root(q: List[str] = Query(None),colors: List[str] = Query(None)):
+def  read_root():
     color = ['#e079db', '#23d620', '#d14336', '#cc12e5', '#b9ef6e', '#3897a5', '#319e12']
 
     sus_students = ["Abdul Murphy", "Carolyn Bond", "Martin Smith", "Joanna Lynch", "Keith Saunders", "Keith Wood", "Marilyn White"]
