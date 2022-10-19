@@ -132,7 +132,7 @@ def  read_root():
                     popup= (student),
                     weight=5,
                     opacity=0.5).add_to(map)
-    print(map.get_root().render())
+  
     return HTMLResponse(content=map.get_root().render(), status_code=200)
 
 
@@ -228,7 +228,6 @@ async def read_root():
     pos = nx.spring_layout(G)
     plt.figure(1,figsize=(40, 40)) 
     nx.draw(G, pos, with_labels=True, node_size=100, font_size=8)
-    print(plt)
     plt.savefig("networkx")
   
     image = Image.open("./networkx.png")
